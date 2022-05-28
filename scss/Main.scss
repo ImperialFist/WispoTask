@@ -1,23 +1,107 @@
 @import "nullstyle.scss";
+
 @font-face {
-    font-family: "AvenirLTStd";
-    src: url(../fonts/AvenirLTStd.eot),
-    url(../fonts/AvenirLTStd.woff) format("woff"),
-    url(../fonts/AvenirLTStd.woff2) format("woff2"),
-    url(../fonts/AvenirLTStd.ttf) format("truetype");
-    font-style: normal;
-    font-weight: normal;
+  font-family: "ProximaNova";
+  src: url(../fonts/ProximaNova/ProximaNova-Bold.eot);
+  src: url("../fonts/ProximaNova/ProximaNova-Bold.eot?#iefix") format("embedded-opentype"), 
+  url(../fonts/ProximaNova/ProximaNova-Bold.woff2) format("woff2"),
+  url(../fonts/ProximaNova/ProximaNova-Bold.woff) format("woff"),
+  url(../fonts/ProximaNova/ProximaNova-Bold.ttf) format("truetype");
+  font-style: normal;
+  font-weight: 700;
 }
 
-$contentFont:'AvenirLTStd', sans-serif;
-$titleFont:'Bebas Neue', cursive;
+@font-face {
+  font-family: "Montserrat";
+  src: url(../fonts/Montserrat/ExtraBold/Montserrat-ExtraBold.eot);
+  src: url("../fonts/Montserrat/ExtraBold/Montserrat-ExtraBold.eot?#iefix") format("embedded-opentype"), 
+  url(../fonts/Montserrat/ExtraBold/Montserrat-ExtraBold.woff2) format("woff2"),
+  url(../fonts/Montserrat/ExtraBold/Montserrat-ExtraBold.woff) format("woff"),
+  url(../fonts/Montserrat/ExtraBold/Montserrat-ExtraBold.ttf) format("truetype");
+  font-style: normal; 
+  font-weight: 800;
+}
 
+@font-face {
+  font-family: "Montserrat";
+  src: url(../fonts/Montserrat/Bold/Montserrat-Bold.eot);
+  src: url("../fonts/Montserrat/Bold/Montserrat-Bold.eot?#iefix") format("embedded-opentype"), 
+  url(../fonts/Montserrat/Bold/Montserrat-Bold.woff2) format("woff2"),
+  url(../fonts/Montserrat/Bold/Montserrat-Bold.woff) format("woff"),
+  url(../fonts/Montserrat/Bold/Montserrat-Bold.ttf) format("truetype");
+  font-style: normal;
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url(../fonts/Montserrat/Medium/Montserrat-Medium.eot);
+  src: url("../fonts/Montserrat/Medium/Montserrat-Medium.eot?#iefix") format("embedded-opentype"),
+  url(../fonts/Montserrat/Medium/Montserrat-Medium.woff2) format("woff2"),
+  url(../fonts/Montserrat/Medium/Montserrat-Medium.woff) format("woff"),
+  url(../fonts/Montserrat/Medium/Montserrat-Medium.ttf) format("truetype");
+  font-style: normal;
+  font-weight: 500;
+}
+
+
+
+$countFont:'ProximaNova', sans-serif;
+$contentFont:'Montserrat', sans-serif;
+
+@mixin fontProps($w,$s) {
+  font-weight: $w;
+  font-size: $s;
+}
+
+%swipers{
+  position: absolute;
+  top: 50%;
+  cursor: pointer;
+  z-index: 10;
+  width: 100px;
+  height: 100px;
+}
 
 body{
   font-family: $contentFont;
-  font-weight: 9930;
+  @include fontProps(500,20px);
 }
 
-h1, h2, h3, h4, h5, h6{
-    font-family: $titleFont;
+h1 {
+  @include fontProps(800,80px);
+}
+
+h2{
+  @include fontProps(700,48px);
+}
+
+h3, h4, h5, h6{
+  @include fontProps(500,26px);
+}
+
+.specialist-slider{
+  padding: 30px 0 70px 0;
+}
+
+
+.swiper-slide__img{
+  max-width: 100%;
+}
+
+.swiper-slide__img{
+  border-radius: 200px 200px 200px 200px;
+}
+
+.swipe-prev{
+  left: 0%;
+  background: url(../img/specialists/specialistsPrev.png) no-repeat center;
+  @extend %swipers;
+  
+}
+
+.swipe-next{
+  right: 0%;
+  background: url(../img/specialists/specialistsNext.png) no-repeat center;
+  @extend %swipers;
 }

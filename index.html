@@ -6,33 +6,238 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Название</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
     <link rel="stylesheet" href="css/Main.css">
 </head>
 <body>
     <header class="header">
-       
+        <div class="container">
+            <div class="header__top-inner">
+                <div class="logo">
+                    <a class="logo__link" href="" >
+                        <img class="logo__img" src="img/icons/Logo.svg" alt="White service logo">
+                    </a>
+                </div>
+                <nav class="menu">
+                    <ul class="menu__list">
+                        <li class="menu__list-item">
+                            Контакты
+                        </li>
+                        <li class="menu__list-item">
+                            Отзывы
+                        </li>
+                        <li class="menu__list-item">
+                            Гарантия
+                        </li>
+                    </ul>
+                </nav>
+                <div class="contact">
+                    <p class="contact__work-time">
+                        Звоните, пн-вс 10:00 - 20:00
+                    </p>
+                    <a class="contact__number" href="tel:+73512207704">
+                        +7 351 220 77 04
+                    </a>
+                </div>
+            </div>
+            <div class="header__bottom-inner">
+                <nav class="bottom-menu">
+                    <ul class="bottom-menu__list">
+                        <li class="bottom-menu__list-item">
+                            Каталог
+                        </li>
+                        <li class="bottom-menu__list-item">
+                            Ремонт Apple
+                        </li>
+                        <li class="bottom-menu__list-item">
+                            Ремонт смартфонов
+                        </li>
+                        <li class="bottom-menu__list-item">
+                            Ремонт планшетов
+                        </li>
+                        <li class="bottom-menu__list-item">
+                            Ремонт ноутбуков
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
     </header>
 
-    <section class="parallax">
-        <div class="parallax__body">
-            <div class="parallax__container --container">
-                <h1 class="parallax__title">Nepal Mountains</h1>
-
-    </section>
-
-    <section class="content">
-        <div class="content__container --container">
-            <h2 class="content__title"></h2>
+    <section class="hero">
+        <div class="container">
+            <div class="hero__left-group">
+                <div class="service-content">
+                    <h1 class="service-content__title">
+                        Сервисный центр
+                    </h1>
+                    <p class="service-content__text">
+                        Ремонт планшетов в Челябинске. Бесплатно продиагностируем и быстро починим любую поломку. Гарантия 3 месяца
+                    </p>
+                    <a  class="service-content__link" href="#">
+                        Записаться на диагностику
+                    </a>
+                </div>
+                <ul class="option-list">
+                    <li class="option-list-item">
+                        Починим даже то, от чего отказались другие
+                    </li>
+                    <li class="option-list-item">
+                        Гарантия нашего сервиса 3 месяца
+                    </li>
+                    <li class="option-list-item">
+                        Собственная выгодная бонусная система
+                    </li>
+                    <li class="option-list-item">
+                        Бесплатная диагностика даже при отказе от ремонта
+                    </li>
+                </ul>
+            </div>
+            <div class="hero__right-group">
+                <img class="hero__img" src="img/hero/heroExamp.png" alt="Broken examples">
+                <div class="fix-counter">
+                    <p class="fix-counter__number">
+                        12 585
+                    </p>
+                    <img class="fix-counter__img" src="img/hero/heroSmile.png" alt="Smile">
+                    <p class="fix-counter__description">
+                        Выполненных ремонтов
+                    </p>
+                </div>
+            </div>
         </div>
     </section>
-  
+
+    <section class="specialists">
+        <div class="container">
+            <h2 class="specialists__title">
+                Ремонт осуществляется первоклассными специалистами
+            </h2>
+            <h3 class="specialists__subtitle">
+                Средний опыт работы наших мастеров 4 года
+            </h3>
+            <!-- carousel -->
+
+                <!-- Slider main container -->
+                <div class="specialist-slider swiper">
+                    <!-- Additional required wrapper -->
+                    <div class="specialist-slider__wrapper swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="specialist-slider__item swiper-slide">
+                            <img class="swiper-slide__img" src="img/specialists/specialistsIlya.png" alt="Specialist photo">
+                            <h2 class="swiper-slide__title">
+                                Илья
+                            </h2>
+                            <p class="swiper-slide__description">
+                                Мастер по ремонту, опыт 5 лет. В «Белом Сервисе» с июля 2020
+                            </p>
+                            <p class="swiper-slide__jobes-done">
+                                Более 4 800 выполненных работ
+                            </p>
+                            <p class="swiper-slide__comment">
+                                Определю любую причину поломки!
+                            </p>
+                        </div>
+                        <div class="specialist-slider__item swiper-slide">
+                            <img class="swiper-slide__img" src="img/specialists/specialistsAlex.png" alt="Specialist photo" >
+                            <h2 class="swiper-slide__title">
+                                Александр
+                            </h2>
+                            <p class="swiper-slide__description">
+                                Мастер по ремонту, опыт 4,5 года. В «Белом Сервисе» с августа 2020
+                            </p>
+                            <p class="swiper-slide__jobes-done">
+                                Более 5 200 выполненных работ
+                            </p>
+                            <p class="swiper-slide__comment">
+                                Верну к жизни, как самые первые модели, так и новинки  смартфонов.
+                            </p>
+                        </div>
+                        <div class="specialist-slider__item swiper-slide">
+                            <img class="swiper-slide__img" src="img/specialists/specialistsAndrew.png" alt="Specialist photo" >
+                            <h2 class="swiper-slide__title">
+                                Андрей
+                            </h2>
+                            <p class="swiper-slide__description">
+                                Мастер по ремонту и переклейке дисплеев, опыт 5 лет. В «Белом Сервисе» с сентября 2020 
+                            </p>
+                            <p class="swiper-slide__jobes-done">
+                                Более 4 800 выполненных работ
+                            </p>
+                            <p class="swiper-slide__comment">
+                                Ремонт Apple – мой конек! 
+                            </p>
+                        </div>
+                        <div class="specialist-slider__item swiper-slide">
+                            <img class="swiper-slide__img" src="img/specialists/specialistsDmitry.png" alt="Specialist photo" >
+                            <h2 class="swiper-slide__title">
+                                Дмитрий
+                            </h2>
+                            <p class="swiper-slide__description">
+                                Мастер по ремонту, опыт 9 лет. В «Белом Сервисе» с марта 2020
+                            </p>
+                            <p class="swiper-slide__jobes-done">
+                                Более 4 800 выполненных работ
+                            </p>
+                            <p class="swiper-slide__comment">
+                                Мы даем гарантию и исполняем ее. На технику – это всегда год.
+                            </p>
+                        </div>
+                    
+                    </div>
+                    <!-- If we need pagination -->
+                    <div class="swiper-pagination"></div>
+                
+                    <!-- If we need navigation buttons -->
+                    <div class="swipe-prev"></div>
+                    <div class="swipe-next"></div>
+                
+                    <!-- If we need scrollbar -->
+                    <div class="swiper-scrollbar"></div>
+                </div>
+
+        </div>
+
+    </section>
+ 
 
     <footer class="footer">
         <div class="container">
+            <div class="footer-content">
+                <ul class="footer-content__list">
+                    <li class="footer-content__item">
+                        <img class="footer-content__img" src="" alt="">
+                    </li>
+                    <li class="footer-content__item">
+                        <div class="filial-content">
+                            <h1 class="filial-content__title">
+                                Сервисные центры
+                            </h1>
+                            <p class="filial-content__offer">
+                                Первый сервисный центр Белый Сервис распахнул свои двери 28 марта 2012 года по адресу г. Челябинск, ул. Энгельса 75. 
+                            </p>
+                            <p class="filial-content__offer">
+                                На текущий момент «Белый Сервис» имеет три филиала со своими приемщиками и мастерами. Гибко распределяем рабочую нагрузку: если персонал на одной из точек перегружен заказами, то часть работ передается их менее загруженным коллегам из другого филиала. 
+                            </p>
+                            <a href="#" class="filial-content__address">
+                                Показать адреса 
+                            </a>
+                        </div>
+                    </li>
+                    <li class="footer-content__item">
+                        <img class="footer-content__img" src="" alt="">
+                    </li>
+                    <li class="footer-content__item">
+                        <img class="footer-content__img" src="" alt="">
+                    </li>
+                </ul>
+
+            </div>
 
         </div>
     </footer>
     <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/swiper-bundle.min.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>
