@@ -63,8 +63,18 @@ ul li {
   list-style: none;
 }
 
+ol, ul {
+  padding: 0;
+  margin: 0;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
 img {
-  vertical-align: top;
+  vertical-align: middle;
 }
 
 h1, h2, h3, h4, h5, h6 {

@@ -11,27 +11,39 @@
 </head>
 <body>
     <header class="header">
+
         <div class="container">
-            <div class="header__top-inner">
-                <div class="logo">
-                    <a class="logo__link" href="" >
-                        <img class="logo__img" src="img/icons/Logo.svg" alt="White service logo">
-                    </a>
+            <div class="header__top-inner d-flex justify-content-between">
+                <div class="header__top-wrapper d-flex align-items-center">
+                    <div class="logo col-6">
+                        <a class="logo__link" href="#" >
+                            <img class="logo__img" src="img/icons/Logo.svg" alt="White service logo">
+                        </a>
+                    </div>
+                    <nav class="menu col-6">
+                        <ul class="menu__list d-flex align-items-center">
+                            <li class="menu__list-item d-flex">
+                                <img class="menu__img" src="img/icons/iconStar.svg" alt="star">
+                                <a class="menu__link" href="#">
+                                    Контакты
+                                </a>
+                            </li>
+                            <li class="menu__list-item d-flex">
+                                <img class="menu__img" src="img/icons/iconStar.svg" alt="star">
+                                <a class="menu__link" href="#">
+                                    Отзывы
+                                </a>
+                            </li>
+                            <li class="menu__list-item d-flex">
+                                <img class="menu__img" src="img/icons/iconStar.svg" alt="star">
+                                <a class="menu__link" href="#">
+                                    Гарантия
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
                 </div>
-                <nav class="menu">
-                    <ul class="menu__list">
-                        <li class="menu__list-item">
-                            Контакты
-                        </li>
-                        <li class="menu__list-item">
-                            Отзывы
-                        </li>
-                        <li class="menu__list-item">
-                            Гарантия
-                        </li>
-                    </ul>
-                </nav>
-                <div class="contact">
+                <div class="contact text-end col-3">
                     <p class="contact__work-time">
                         Звоните, пн-вс 10:00 - 20:00
                     </p>
@@ -40,23 +52,61 @@
                     </a>
                 </div>
             </div>
+        </div>
+            <div class="split-border"></div>
+        <div class="container">
             <div class="header__bottom-inner">
                 <nav class="bottom-menu">
-                    <ul class="bottom-menu__list">
-                        <li class="bottom-menu__list-item">
-                            Каталог
+                    <ul class="bottom-menu__list d-flex justify-content-between ">
+                        <li class="bottom-menu__list-item catalog-item">
+                            <a class="bottom-menu__title" href="#">
+                                <img class="bottom-menu__img" src="img/icons/iconCatalog.svg" alt="">
+                                Каталог
+                            </a> 
                         </li>
-                        <li class="bottom-menu__list-item">
-                            Ремонт Apple
+                        <li class="bottom-menu__list-item apple-item">
+                            <a class="bottom-menu__title dropdown-toggle" href="#" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                <img class="bottom-menu__img" src="img/icons/iconApple.svg" alt="">
+                                Ремонт Apple
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                <li><a class="dropdown-item" href="#">Что-то для Apple</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
                         </li>
-                        <li class="bottom-menu__list-item">
-                            Ремонт смартфонов
+                        <li class="bottom-menu__list-item smartphone-item">
+                            <a class="bottom-menu__title dropdown-toggle" href="#" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                <img class="bottom-menu__img" src="img/icons/iconSmartphone.svg" alt="">
+                                Ремонт смартфонов
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                <li><a class="dropdown-item" href="#">Что-то для смартфонов</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
                         </li>
-                        <li class="bottom-menu__list-item">
-                            Ремонт планшетов
+                        <li class="bottom-menu__list-item tablet-item">
+                            <a class="bottom-menu__title dropdown-toggle" href="#" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                <img class="bottom-menu__img" src="img/icons/iconTablet.svg" alt="">
+                                Ремонт планшетов
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                <li><a class="dropdown-item" href="#">Что-то для планшетов</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
                         </li>
-                        <li class="bottom-menu__list-item">
-                            Ремонт ноутбуков
+                        <li class="bottom-menu__list-item notebook-item">
+                            <a class="bottom-menu__title dropdown-toggle" href="#" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                <img class="bottom-menu__img" src="img/icons/iconNotebook.svg" alt="">
+                                Ремонт ноутбуков
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                <li><a class="dropdown-item" href="#">Что-то для ноутбуков</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
                         </li>
                     </ul>
                 </nav>
@@ -183,17 +233,34 @@
                                 Мы даем гарантию и исполняем ее. На технику – это всегда год.
                             </p>
                         </div>
+                        <div class="specialist-slider__item swiper-slide">
+                            <img class="swiper-slide__img" src="img/specialists/specialistsDmitry.png" alt="Specialist photo" >
+                            <h2 class="swiper-slide__title">
+                                Дмитрий
+                            </h2>
+                            <p class="swiper-slide__description">
+                                Мастер по ремонту, опыт 9 лет. В «Белом Сервисе» с марта 2020
+                            </p>
+                            <p class="swiper-slide__jobes-done">
+                                Более 4 800 выполненных работ
+                            </p>
+                            <p class="swiper-slide__comment">
+                                Мы даем гарантию и исполняем ее. На технику – это всегда год.
+                            </p>
+                        </div>
                     
                     </div>
                     <!-- If we need pagination -->
                     <div class="swiper-pagination"></div>
                 
                     <!-- If we need navigation buttons -->
-                    <div class="swipe-prev"></div>
-                    <div class="swipe-next"></div>
+                    <div class="swipe-prev">
+                        <img src="img/icons/iconPrev.svg" alt="Prev icon" class="swipe-prev__img">
+                    </div>
+                    <div class="swipe-next">
+                        <img src="img/icons/iconNext.svg" alt="Next icon" class="swipe-prev__img">
+                    </div>
                 
-                    <!-- If we need scrollbar -->
-                    <div class="swiper-scrollbar"></div>
                 </div>
 
         </div>
