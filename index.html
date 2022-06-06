@@ -43,7 +43,7 @@
                         </ul>
                     </nav>
                 </div>
-                <div class="contact text-end col-3">
+                <div class="contact text-end ">
                     <p class="contact__work-time">
                         Звоните, пн-вс 10:00 - 20:00
                     </p>
@@ -58,13 +58,13 @@
             <div class="header__bottom-inner">
                 <nav class="bottom-menu">
                     <ul class="bottom-menu__list d-flex justify-content-between ">
-                        <li class="bottom-menu__list-item catalog-item">
+                        <li class="bottom-menu__list-item bottom-menu__list-item--catalog">
                             <a class="bottom-menu__title" href="#">
                                 <img class="bottom-menu__img" src="img/icons/iconCatalog.svg" alt="">
                                 Каталог
                             </a> 
                         </li>
-                        <li class="bottom-menu__list-item apple-item">
+                        <li class="bottom-menu__list-item bottom-menu__list-item--apple">
                             <a class="bottom-menu__title dropdown-toggle" href="#" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                                 <img class="bottom-menu__img" src="img/icons/iconApple.svg" alt="">
                                 Ремонт Apple
@@ -75,7 +75,7 @@
                                 <li><a class="dropdown-item" href="#">Something else here</a></li>
                             </ul>
                         </li>
-                        <li class="bottom-menu__list-item smartphone-item">
+                        <li class="bottom-menu__list-item bottom-menu__list-item--smartphone">
                             <a class="bottom-menu__title dropdown-toggle" href="#" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                                 <img class="bottom-menu__img" src="img/icons/iconSmartphone.svg" alt="">
                                 Ремонт смартфонов
@@ -86,7 +86,7 @@
                                 <li><a class="dropdown-item" href="#">Something else here</a></li>
                             </ul>
                         </li>
-                        <li class="bottom-menu__list-item tablet-item">
+                        <li class="bottom-menu__list-item bottom-menu__list-item--tablet">
                             <a class="bottom-menu__title dropdown-toggle" href="#" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                                 <img class="bottom-menu__img" src="img/icons/iconTablet.svg" alt="">
                                 Ремонт планшетов
@@ -97,7 +97,7 @@
                                 <li><a class="dropdown-item" href="#">Something else here</a></li>
                             </ul>
                         </li>
-                        <li class="bottom-menu__list-item notebook-item">
+                        <li class="bottom-menu__list-item bottom-menu__list-item--notebook">
                             <a class="bottom-menu__title dropdown-toggle" href="#" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                                 <img class="bottom-menu__img" src="img/icons/iconNotebook.svg" alt="">
                                 Ремонт ноутбуков
@@ -115,47 +115,58 @@
     </header>
 
     <section class="hero">
+        <div class="hero__gradient-split container-fluid"></div>
         <div class="container">
-            <div class="hero__left-group">
-                <div class="service-content">
-                    <h1 class="service-content__title">
-                        Сервисный центр
-                    </h1>
-                    <p class="service-content__text">
-                        Ремонт планшетов в Челябинске. Бесплатно продиагностируем и быстро починим любую поломку. Гарантия 3 месяца
-                    </p>
-                    <a  class="service-content__link" href="#">
-                        Записаться на диагностику
-                    </a>
+            <div class="hero__wrapper d-flex">
+                <div class="hero__left-group ">
+                    <div class="service-content">
+                        <h1 class="service-content__title">
+                            Сервисный центр
+                        </h1>
+                        <p class="service-content__text">
+                            Ремонт планшетов в Челябинске. Бесплатно продиагностируем и быстро починим любую поломку. Гарантия 3 месяца
+                        </p>
+                        <a  class="service-content__link" href="#">
+                            <span class="service-content__arrow">Записаться на диагностику</span>
+                            
+                        </a>
+                    </div>
+                    <ul class="option-list d-flex flex-wrap">
+                        <li class="option-list__item ">
+                            <img class="option-list__icon" src="img/hero/heroScrewd.png" alt="scredriver icon">
+                             <span class="option-list__txt"> Починим даже то, от чего отказались другие </span>
+                        </li>
+                        <li class="option-list__item">
+                            <img class="option-list__icon" src="img/hero/heroGarant.png" alt="shied icon">
+                            <span class="option-list__txt">Гарантия нашего <br> сервиса 3 месяца</span>
+                        </li>
+                        <li class="option-list__item">
+                            <img class="option-list__icon" src="img/hero/heroBonus.png" alt="bonus icon">
+                            <span class="option-list__txt">Собственная выгодная бонусная система</span>
+                        </li>
+                        <li class="option-list__item">
+                            <img class="option-list__icon" src="img/hero/heroDiag.png" alt="diagnostic icon">
+                            <span class="option-list__txt">Бесплатная диагностика даже при отказе от ремонта</span>
+                        </li>
+                    </ul>
                 </div>
-                <ul class="option-list">
-                    <li class="option-list-item">
-                        Починим даже то, от чего отказались другие
-                    </li>
-                    <li class="option-list-item">
-                        Гарантия нашего сервиса 3 месяца
-                    </li>
-                    <li class="option-list-item">
-                        Собственная выгодная бонусная система
-                    </li>
-                    <li class="option-list-item">
-                        Бесплатная диагностика даже при отказе от ремонта
-                    </li>
-                </ul>
-            </div>
-            <div class="hero__right-group">
-                <img class="hero__img" src="img/hero/heroExamp.png" alt="Broken examples">
-                <div class="fix-counter">
-                    <p class="fix-counter__number">
-                        12 585
-                    </p>
-                    <img class="fix-counter__img" src="img/hero/heroSmile.png" alt="Smile">
-                    <p class="fix-counter__description">
-                        Выполненных ремонтов
-                    </p>
+                <div class="hero__right-group ">
+                    <img class="hero__img" src="img/hero/heroExamp.png" alt="Broken examples">
+                    <div class="fix-counter">
+                        <div class="fix-counter__wrapper">
+                            <p class="fix-counter__number">
+                                12 585
+                            </p>
+                            <img class="fix-counter__img" src="img/hero/heroSmile.png" alt="Smile">
+                            <p class="fix-counter__description">
+                                Выполненных ремонтов
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
+        <div class="hero__gradient-split hero__gradient-split--no-shadow container-fluid"></div>
     </section>
 
     <section class="specialists">
@@ -209,7 +220,7 @@
                                 Андрей
                             </h2>
                             <p class="swiper-slide__description">
-                                Мастер по ремонту и переклейке дисплеев, опыт 5 лет. В «Белом Сервисе» с сентября 2020 
+                                Мастер по ремонту и переклейке дисплеев, опыт 5 лет. <br> В «Белом Сервисе» с сентября 2020 
                             </p>
                             <p class="swiper-slide__jobes-done">
                                 Более 4 800 выполненных работ
@@ -271,34 +282,35 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <ul class="footer-content__list">
-                    <li class="footer-content__item">
-                        <img class="footer-content__img" src="" alt="">
-                    </li>
-                    <li class="footer-content__item">
-                        <div class="filial-content">
-                            <h1 class="filial-content__title">
-                                Сервисные центры
-                            </h1>
-                            <p class="filial-content__offer">
-                                Первый сервисный центр Белый Сервис распахнул свои двери 28 марта 2012 года по адресу г. Челябинск, ул. Энгельса 75. 
-                            </p>
-                            <p class="filial-content__offer">
-                                На текущий момент «Белый Сервис» имеет три филиала со своими приемщиками и мастерами. Гибко распределяем рабочую нагрузку: если персонал на одной из точек перегружен заказами, то часть работ передается их менее загруженным коллегам из другого филиала. 
-                            </p>
-                            <a href="#" class="filial-content__address">
-                                Показать адреса 
-                            </a>
-                        </div>
-                    </li>
-                    <li class="footer-content__item">
-                        <img class="footer-content__img" src="" alt="">
-                    </li>
-                    <li class="footer-content__item">
-                        <img class="footer-content__img" src="" alt="">
-                    </li>
-                </ul>
-
+                <div class="footer-content__wrapper">
+                    <ul class="footer-content__list d-flex flex-wrap">
+                        <li class="footer-content__item">
+                            <img class="footer-content__img" src="img/serviceCenter/centerOne.jpg" alt="Service center photo">
+                        </li>
+                        <li class="footer-content__item">
+                            <div class="filial-content d-flex flex-column">
+                                <h1 class="filial-content__title">
+                                    Сервисные центры
+                                </h1>
+                                <p class="filial-content__offer">
+                                    Первый сервисный центр Белый Сервис распахнул свои двери 28 марта 2012 года по адресу г. Челябинск, ул. Энгельса 75. 
+                                </p>
+                                <p class="filial-content__offer">
+                                    На текущий момент «Белый Сервис» имеет три филиала со своими приемщиками и мастерами. Гибко распределяем рабочую нагрузку: если персонал на одной из точек перегружен заказами, то часть работ передается их менее загруженным коллегам из другого филиала. 
+                                </p>
+                                <a href="#" class="filial-content__address">
+                                    Показать адреса 
+                                </a>
+                            </div>
+                        </li>
+                        <li class="footer-content__item">
+                            <img class="footer-content__img" src="img/serviceCenter/centerTwo.jpg" alt="Service center photo">
+                        </li>
+                        <li class="footer-content__item">
+                            <img class="footer-content__img" src="img/serviceCenter/centerThree.jpg" alt="Service center photo">
+                        </li>
+                    </ul>
+                </div>
             </div>
 
         </div>

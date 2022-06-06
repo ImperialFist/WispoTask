@@ -8,7 +8,19 @@ new Swiper('.specialist-slider', {
         clickable: true,
         
     },
+ 
     slidesPerView: 4,
-    spaceBetween: 30,
+    spaceBetween: 90,
+    breakpoints:{
+        375:{
+            slidesPerView: 1
+        },
+        768:{
+            slidesPerView:3,
+        },
+        1920:{
+            slidesPerView:4,
+        }
+    }
 
 });
