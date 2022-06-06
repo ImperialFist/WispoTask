@@ -35,6 +35,17 @@
 
 @font-face {
   font-family: "Montserrat";
+  src: url(../fonts/Montserrat/SemiBold/Montserrat-SemiBold.eot);
+  src: url("../fonts/Montserrat/Medium/Montserrat-SemiBold.eot?#iefix") format("embedded-opentype"),
+  url(../fonts/Montserrat/SemiBold/Montserrat-SemiBold.woff2) format("woff2"),
+  url(../fonts/Montserrat/SemiBold/Montserrat-SemiBold.woff) format("woff"),
+  url(../fonts/Montserrat/SemiBold/Montserrat-SemiBold.ttf) format("truetype");
+  font-style: normal;
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "Montserrat";
   src: url(../fonts/Montserrat/Medium/Montserrat-Medium.eot);
   src: url("../fonts/Montserrat/Medium/Montserrat-Medium.eot?#iefix") format("embedded-opentype"),
   url(../fonts/Montserrat/Medium/Montserrat-Medium.woff2) format("woff2"),
@@ -68,6 +79,18 @@ $headerGrad: linear-gradient(0deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.05
   background-color: #fff;
   border: 1px solid #e5e5e5;
   box-shadow: 0px 6px 30px rgba(0, 0, 0, 0.05);
+}
+
+%dropdownIndicator{
+  background: url(../img/hero/menuIndicator.png) no-repeat center;
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+  margin-left: 0.255em;
+  content: "";
+  border-right: 0.3em solid transparent;
+  border-bottom: 0;
+  border-left: 0.3em solid transparent;
 }
 
 body{
@@ -312,11 +335,8 @@ a, a:hover{
 
 }
 
-.dropdown-toggle::after{
-  background: url(../img/icons/iconDdmenu.svg) no-repeat center;
-  width: 10px;
-  height: 10px;
-  border-top: none;
+.bottom-menu__title::after{
+@extend %dropdownIndicator;
 }
 
 .hero {
@@ -693,8 +713,75 @@ height: 1px;
   display: none;
 }
 
+.offcanvas-section {
+}
+.offcanvas {
 
-/* Responsive */
+		// .offcanvas__header
+
+		&__header {
+      padding: 20px 24px 32px 24px;
+		}
+
+		// .offcanvas__title
+
+		&__title {
+      @include fontProps(600, 24px);
+      line-height: 29.26px;
+		}
+
+		// .offcanvas__close-btn
+
+		&__close-btn {
+      background: url(../img/icons/iconCross.svg) no-repeat center #F6F6F6;;
+      width: 24px;
+      height: 24px;
+      border-radius: 18px;
+
+		}
+
+		// .offcanvas__body
+
+		&__body {
+      padding: 0 24px;
+		}
+}
+.offcanvas-start {
+}
+.text-reset {
+}
+.menu {
+}
+.d-flex {
+}
+.flex-column {
+}
+.menu-item {
+  border-bottom: 3px solid #F6F6F6;
+		// .menu-item__title
+
+		&__title {
+      display: block;
+      font-size: 14px;
+      line-height: 17px;
+      padding: 25px 0;
+		}
+
+    &__title::after {
+      @extend %dropdownIndicator;
+      transform: rotate(-90deg);
+		}
+		// .menu-item__img
+
+		&__img {
+		}
+}
+
+
+
+
+
+/* ----------Responsive------------ */
 /* 1400px - 1920px */
 @media (min-width: 1920px){
 .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {

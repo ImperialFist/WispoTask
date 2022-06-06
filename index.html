@@ -59,7 +59,9 @@
                 </div>
             </div>
             <div class="header__mobile-menu justify-content-between">
-                <a class="header__burger" href="#" ></a>
+                <!-- Offcanvas trigger -->
+                <a class="header__burger" href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBackdrop" aria-controls="offcanvasWithBackdrop"></a>
+                
                 <a class="header__contact-btn" href="#">
                     Связаться
                 </a>
@@ -72,13 +74,13 @@
                     <ul class="bottom-menu__list justify-content-between ">
                         <li class="bottom-menu__list-item bottom-menu__list-item--catalog">
                             <a class="bottom-menu__title" href="#">
-                                <img class="bottom-menu__img" src="img/icons/iconCatalog.svg" alt="">
+                                <img class="bottom-menu__img" src="img/icons/iconCatalog.svg" alt="Catalog icon">
                                 <span class="bottom-menu__txt"> Каталог </span>
                             </a> 
                         </li>
                         <li class="bottom-menu__list-item bottom-menu__list-item--apple">
-                            <a class="bottom-menu__title dropdown-toggle" href="#" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                                <img class="bottom-menu__img" src="img/icons/iconApple.svg" alt="">
+                            <a class="bottom-menu__title" href="#" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                <img class="bottom-menu__img" src="img/icons/iconApple.svg" alt=" fix icon">
                                 Ремонт Apple
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
@@ -88,8 +90,8 @@
                             </ul>
                         </li>
                         <li class="bottom-menu__list-item bottom-menu__list-item--smartphone">
-                            <a class="bottom-menu__title dropdown-toggle" href="#" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                                <img class="bottom-menu__img" src="img/icons/iconSmartphone.svg" alt="">
+                            <a class="bottom-menu__title" href="#" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                <img class="bottom-menu__img" src="img/icons/iconSmartphone.svg" alt="Phone fix icon">
                                 Ремонт смартфонов
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
@@ -99,8 +101,8 @@
                             </ul>
                         </li>
                         <li class="bottom-menu__list-item bottom-menu__list-item--tablet">
-                            <a class="bottom-menu__title dropdown-toggle" href="#" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                                <img class="bottom-menu__img" src="img/icons/iconTablet.svg" alt="">
+                            <a class="bottom-menu__title" href="#" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                <img class="bottom-menu__img" src="img/icons/iconTablet.svg" alt="Tablet fix icon">
                                 Ремонт планшетов
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
@@ -110,8 +112,8 @@
                             </ul>
                         </li>
                         <li class="bottom-menu__list-item bottom-menu__list-item--notebook">
-                            <a class="bottom-menu__title dropdown-toggle" href="#" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                                <img class="bottom-menu__img" src="img/icons/iconNotebook.svg" alt="">
+                            <a class="bottom-menu__title" href="#" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                <img class="bottom-menu__img" src="img/icons/iconNotebook.svg" alt="Notebook fix icon">
                                 Ремонт ноутбуков
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
@@ -125,6 +127,52 @@
             </div>
         </div>
     </header>
+
+    <section class="offcanvas-section">
+        <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasWithBackdrop" aria-labelledby="offcanvasWithBackdropLabel">
+            <div class="offcanvas__header d-flex justify-content-between">
+                <h5 class="offcanvas__title" id="offcanvasWithBackdropLabel">
+                    Меню
+                </h5>
+                <button type="button" class="offcanvas__close-btn text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas__body">
+                <ul class="menu d-flex flex-column">
+                    <li class="menu-item">
+                        <a class="menu-item__title" href="#">
+                            <img class="menu-item__img" src="img/icons/iconApple.svg" alt="Apple fix icon">
+                            Ремонт Apple
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a class="menu-item__title" href="#">
+                            <img class="menu-item__img" src="img/icons/iconSmartphone.svg" alt="Phone fix icon">
+                            Ремонт смартфонов
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a class="menu-item__title" href="#">
+                            <img class="menu-item__img" src="img/icons/iconTablet.svg" alt="Tablet fix icon">
+                            Ремонт планшетов
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a class="menu-item__title" href="#">
+                            <img class="menu-item__img" src="img/icons/iconNotebook.svg" alt="Notebook fix icon">
+                            Ремонт ноутбуков
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a class="menu-item__title" href="#">
+                            <img class="menu-item__img" src="img/icons/iconGamepad.svg" alt="Game consoles fix icon">
+                            Ремонт игровых приставок
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+          </div>
+    </section>
 
     <section class="hero">
         <div class="hero__gradient-split container-fluid"></div>
@@ -190,7 +238,6 @@
                 Средний опыт работы наших мастеров 4 года
             </h3>
             <!-- carousel -->
-
                 <!-- Slider main container -->
                 <div class="specialist-slider swiper">
                     <!-- Additional required wrapper -->
@@ -273,10 +320,10 @@
                         </div>
                     
                     </div>
-                    <!-- If we need pagination -->
+                    <!-- Pagination -->
                     <div class="swiper-pagination"></div>
                 
-                    <!-- If we need navigation buttons -->
+                    <!-- Navigation buttons -->
                     <div class="swipe-prev">
                         <img src="img/icons/iconPrev.svg" alt="Prev icon" class="swipe-prev__img">
                     </div>
