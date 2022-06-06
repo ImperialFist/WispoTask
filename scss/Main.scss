@@ -147,15 +147,40 @@ a, a:hover{
   // .header__top-inner
 
   &__top-inner {
-    padding-top: 24px;
-    padding-bottom: 31px;
-
-  }
+    padding: 24px 0 20px 0;
+  } 
 
   // .header__bottom-inner
 
   &__bottom-inner {
   }
+
+  //.header__burger
+  &__burger{
+    background: url(../img/icons/iconBurger.svg) no-repeat left;
+    display: block;
+    width: 34px;
+    height: 19px;
+  }
+  //.header__mobile-menu
+  &__mobile-menu{
+    display: none;
+    align-items: center;
+    padding-bottom: 14px;
+  }
+
+
+  //.header__contact-btn
+  &__contact-btn{
+    display: block;
+    @include fontProps(600, 14px);
+    line-height: 17px;
+    color: #fff;
+    padding: 7px 15px 8px 15px;
+    background: $yellowGrad;
+    border-radius: 70px;
+  }
+
 }
 
 .split-border{
@@ -225,17 +250,24 @@ a, a:hover{
   &__number {
     background: url(../img/icons/iconCall.svg) no-repeat left;
     padding-left: 7%;
-    line-height: 32px;
+    line-height: 31.6px;
     display: block;
-    // margin-left: 24%;
     @include fontProps(700, 26px);
   }
+  &__number-mobile{
+    display: none;
+    @include fontProps(600, 16px);
+    line-height: 19.5px;
+    align-self: center;
+  }
+
 }
 .bottom-menu {
 
   // .bottom-menu__list
 
   &__list {
+    display: flex;
     height: 60px;
     align-items: center;
     text-align: center;
@@ -393,6 +425,7 @@ height: 1px;
 }
 
 .option-list {
+  flex-wrap: wrap;
   &__item {
     display: flex;
     flex: 0 1 50%;
@@ -428,6 +461,7 @@ height: 1px;
   left: 70%;
   justify-content: space-between;
   padding: 20px 40px;
+  box-shadow: 0px 10px 30px -6px rgba(35, 25, 4, 0.15);
   }
 
   // .fix-counter__number
@@ -535,7 +569,7 @@ height: 1px;
 
   &__jobes-done {
     margin: 32px 0;
-    padding-left: 9%;
+    padding: 1.5% 0 1.5% 9%;
     font-size: 16px;
     background: url(../img/specialists/Ok.png) no-repeat left top/24px 24px;
   }
@@ -645,6 +679,7 @@ height: 1px;
     cursor: pointer;
     transition: all 0.3s ease;
     line-height: 21.6px;
+    @include fontProps(700, 18px);
   }
 
   &__address:hover{
@@ -652,6 +687,10 @@ height: 1px;
     background-color: #000;
   }
 
+}
+
+.logo__mobile-link{
+  display: none;
 }
 
 
@@ -665,6 +704,15 @@ height: 1px;
 
 /* 1024px - 1366px */
 @media screen and (max-width:1366px)  {
+
+  .menu{
+    display: none;
+  }
+
+  .header__top-inner{
+    padding: 13px 0 17px 0;
+  }
+
   .service-content__title{
     font-size: 70px;
     line-height: 70px;
@@ -759,6 +807,10 @@ height: 1px;
 /* 768px - 1024 px */
 @media screen and (max-width:1024px) {
 
+  .header__top-inner{
+    padding: 15px 0 ;
+  }
+
   .service-content__arrow{
     font-size: 14px;
     line-height: 16.8px;
@@ -845,11 +897,13 @@ height: 1px;
   .swiper-slide{
     &__title{
       padding-top: 32px;
+      font-size: 20px;
+      line-height: 26px;
     }
 
     &__jobes-done{
       margin: 24px 0;
-      padding-left: 11%;
+      padding-left: 14%;
     }
 
     &__description, &__jobes-done, &__comment {
@@ -858,18 +912,252 @@ height: 1px;
     }
   }
 
+  .footer-content__wrapper{
+    padding-top: 80px;
+  }
+
+  .footer-content__item{ 
+    margin: 0;
+    &--img-1{
+      order: 2;
+      flex: 0 1 33.3%;
+    }
+    &--txt{
+      order: 1;
+      flex: 1 1 100%;
+    }
+
+    &--img-2{
+      order: 3;
+      flex: 0 1 33.3%;
+    }
+    &--img-3{
+      order: 4;
+      flex: 0 1 33.3%;
+    }
+  }
+
+  .filial-content__title{
+    font-size: 40px;
+    line-height: 40px;
+    padding-bottom: 40px;
+  }
+  .filial-content__offer{
+    padding-bottom: 24px;
+    font-size: 14px;
+    line-height: 19.6px;
+  }
+
+  .filial-content__address{
+    padding: 16.5px 30px;
+    font-size: 14px;
+    line-height: 16.8px;
+    margin-bottom: 40px;
+  }
+
+  .contact__number{
+    font-size: 18px;
+    line-height: 21.9px;
+    margin-left: auto;
+    width: 71%;
+  }
+  .contact__work-time{
+    font-size: 12px;
+    line-height: 14.6px;
+    width: 77%;
+    margin-left: auto;
+    padding-left: 3%;
+  }
+
+  .option-list__txt{
+    font-size: 14px;
+    line-height: 19.6px;
+  }
+
 }
 
 /* 375px - 768px */
 @media screen and (max-width:768px) {
-  .container{
 
+  .header__top-inner{
+    padding: 13px 0;
   }
+
+  .bottom-menu__txt{
+    display: none;
+  }
+  
+
+  .dropdown-toggle::after{
+    opacity: 0;
+  }
+  .option-list{
+    flex-direction: column;
+  }
+  .hero__left-group{
+    width: 55%;
+  }
+
+  .hero__right-group, .hero__img{
+    width: 45%;
+  }
+
+  .service-content__text--garanty{
+    display: none;
+  }
+  .fix-counter__wrapper{
+    width: 39%;
+    left: 55%;
+    bottom: 14%;
+  }
+
+  .specialists__title{
+    padding-top: 120px;
+  }
+  .swiper-slide__comment{
+    font-size: 12px;
+    line-height: 14.4px;
+  }
+
+  .swipe-prev, .swipe-next{
+    top: 42%;
+  }
+
 }
+
+
+
 
 /* null  - 375px */
 @media screen and (max-width:375px) {
-  .container{
+  .logo__link{
+    display: none;
+  }
+  .logo__mobile-link{
+    display: block;
+  }
+  .contact__number-mobile{
+    display: block;
+  }
+  .contact{
+    display: none;
+  }
+  .header__mobile-menu{
+    display: flex;
+  }
+
+  .bottom-menu__list{
+    display: none;
+  }
+  .fix-counter__wrapper{
+    width: 78%;
+    left: 12%;
+    bottom: -2%;
+  }
+
+  .service-content{
+    &__title{
+      font-size: 26px;
+      line-height: 26px;
+      padding: 60px 0 32px;
+      width: 72%;
+    }
+
+    &__text{
+      font-size: 14px;
+      line-height: 16.8px;
+      padding-bottom: 32px;
+      width: 60%;
+    }
+
+    &__link{
+      width: 100%;
+    }
+    &__arrow{
+      margin-left: 10%;
+    }
+  }
+
+  .hero{
+    &__img{
+      height: 28%;
+    }
+
+    &__right-group{
+      width: 0%;
+    }
+    &__left-group{
+      width: 100%;
+    }
+
+    &__gradient-split--no-shadow{
+      display: none;
+    }
+  }
+
+  .option-list{
+    flex-direction: row;
+    &__item{
+      flex-direction: column;
+      margin-bottom: 24px;
+      flex-basis: 50%;
+    }
+     &__txt{
+       padding-top: 20px;
+       padding-right: 3%;
+      text-align: center;
+    }
+  }
+
+  .specialists__title{
+    padding-top: 65px;
+    font-size: 22px;
+    line-height: 22px;
+  }
+  .specialists__subtitle{
+    padding-top: 24px;
+    font-size: 14px;
+    line-height: 16.8px;
+  }
+  .specialist-slider{
+    padding: 40px 0 50px 0;
+  }
+
+  .swiper-slide__title{
+    font-size: 18px;
+    line-height: 23.4px;
+  }
+  .swiper-slide__description{
+
+    width: 70%;
+  }
+
+  .footer-content{
+    &__wrapper{
+      padding-top: 60px;
+      padding-bottom: 50px;
+    }
+
+    &__list{
+      flex-direction: column;
+    }
+    &__item{
+      margin-bottom: 30px;
+      padding-right: 8px;
+    }
 
   }
+
+  .filial-content__title{
+    text-align: center;
+    width: 100%;
+    font-size: 26px;
+    line-height: 26px;
+  }
+  .filial-content__address{
+    margin-bottom: 0;
+    width: 100%;
+    text-align: center;
+  }
+
 }

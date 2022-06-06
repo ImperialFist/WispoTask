@@ -17,6 +17,7 @@ new Swiper('.specialist-slider', {
         },
         768:{
             slidesPerView:3,
+            spaceBetween: 50,
         },
         1920:{
             slidesPerView:4,
