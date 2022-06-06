@@ -1116,7 +1116,12 @@ height: 1px;
 
 
 /* null  - 375px */
-@media screen and (max-width:375px) {
+// @media screen and (max-width:375px) {
+  @media screen and (max-width:576px) {
+    .container{
+      width: 100%;
+    }
+
   .logo__link{
     display: none;
   }
