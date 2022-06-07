@@ -315,9 +315,7 @@ a, a:hover {
 }
 
 .bottom-menu__img {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  padding-right: 15px;
 }
 
 .bottom-menu__list-item {
@@ -719,13 +717,14 @@ a, a:hover {
 }
 
 /* ----------Responsive------------ */
-/* 1400px - 1920px */
+/*container for 1920px */
 @media (min-width: 1920px) {
   .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
     max-width: 1520px;
   }
 }
 
+/* 1400px - 1920px NOT NEEDED due to TechTask*/
 /* 1200px - 1400px ADAPTED FOR 1366px*/
 @media screen and (max-width: 1400px) {
   .menu {
@@ -809,6 +808,13 @@ a, a:hover {
   }
   .service-content__link {
     padding: 20px 40px;
+  }
+  .bottom-menu__title--apple, .bottom-menu__title--smartphone, .bottom-menu__title--tablet, .bottom-menu__title--notebook {
+    font-size: 14px;
+    line-height: 17px;
+  }
+  .bottom-menu__title--catalog::after {
+    display: none;
   }
 }
 

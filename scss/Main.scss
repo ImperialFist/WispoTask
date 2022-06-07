@@ -295,9 +295,9 @@ a, a:hover{
     align-items: center;
     text-align: center;
   }
-
+ // .bottom-menu__img
   &__img{
-    align-items: center;
+    padding-right: 15px;
   }
 
   // .bottom-menu__list-item
@@ -780,11 +780,15 @@ height: 1px;
 
 
 /* ----------Responsive------------ */
-/* 1400px - 1920px */
+/*container for 1920px */
 @media (min-width: 1920px){
 .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
     max-width: 1520px;
 }
+}
+/* 1400px - 1920px NOT NEEDED due to TechTask*/
+@media screen and (max-width:1920px)  {
+  
 }
 
 /* 1200px - 1400px ADAPTED FOR 1366px*/
@@ -885,6 +889,17 @@ height: 1px;
 
   .service-content__link{
     padding: 20px 40px;
+  }
+
+  .bottom-menu__title{
+    &--apple, &--smartphone, &--tablet, &--notebook{
+      font-size: 14px;
+      line-height: 17px;
+    }
+
+    &--catalog::after{
+      display: none;
+    }
   }
 
 }
