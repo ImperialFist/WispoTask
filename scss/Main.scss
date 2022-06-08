@@ -304,36 +304,16 @@ a, a:hover{
 
   &__list-item {
     border-right: 1px solid $borderColor;
+    padding-right: 2%;
   }
 
   &__title{
     @include fontProps(500,16px);
   }
 
-}
-
-.bottom-menu__list-item{
-
-  &--catalog{
-    flex: 0 1 16%;
-    text-align: start;
-  }
-  &--apple{
-    flex: 0 1 36%;
-  }
-  &--smartphone{
-    flex: 0 1 30%;
-  }
-
-  &--tablet{
-    flex: 0 1 30%;
-  }
-
-  &--notebook{
-    flex: 0 1 30%;
-  }
 
 }
+
 
 .bottom-menu__title::after{
 @extend %dropdownIndicator;
@@ -788,6 +768,10 @@ height: 1px;
 }
 /* 1400px - 1920px NOT NEEDED due to TechTask*/
 @media screen and (max-width:1920px)  {
+  .fix-counter__wrapper{
+    width: 35%;
+    left: 62%;
+  }
   
 }
 
@@ -838,8 +822,8 @@ height: 1px;
   }
   
   .fix-counter__wrapper{
-    left:62%;
-    width: 34%;
+    width: 38%;
+    left: 61%;
     bottom: 26%;
   }
 
@@ -892,6 +876,7 @@ height: 1px;
   }
 
   .bottom-menu__title{
+
     &--apple, &--smartphone, &--tablet, &--notebook{
       font-size: 14px;
       line-height: 17px;
@@ -901,6 +886,7 @@ height: 1px;
       display: none;
     }
   }
+
 
 }
 
@@ -922,13 +908,19 @@ height: 1px;
   }
  
   .bottom-menu{
-    &__list-item--notebook{
+
+    &__title--notebook{
       display: none;
     }
 
-    &__list-item--apple, &__list-item--smartphone, &__list-item--tablet{
+    &__list-item{
       border-right: none;
     }
+
+    &__list-item:first-child{
+      border-right: 1px solid #e5e5e5;
+    }
+    
   }
 
   .service-content__title{
@@ -1078,6 +1070,19 @@ height: 1px;
 
 /* 768px - 992px */
 @media screen and (max-width:992px) {
+  .fix-counter__wrapper{
+    width: 36%;
+    left: 63%;
+  }
+
+  .bottom-menu__title::after{
+    display: none;
+  }
+  .bottom-menu__txt{
+    display: none;
+  }
+
+
 
 }
 
@@ -1088,10 +1093,17 @@ height: 1px;
     padding: 13px 0;
   }
 
-  .bottom-menu__txt{
-    display: none;
+  .service-content__arrow{
+    width: 103%;
+  }
+
+  .contact__work-time{
+    width: 92%;
   }
   
+  .contact__number{
+    width: 87%;
+  }
 
   .dropdown-toggle::after{
     opacity: 0;
@@ -1104,15 +1116,15 @@ height: 1px;
   }
 
   .hero__right-group, .hero__img{
-    width: 45%;
+    width: 40%;
   }
 
   .service-content__text--garanty{
     display: none;
   }
   .fix-counter__wrapper{
-    width: 39%;
-    left: 55%;
+    width: 48%;
+    left: 52%;
     bottom: 14%;
   }
 
@@ -1126,6 +1138,16 @@ height: 1px;
 
   .swipe-prev, .swipe-next{
     top: 42%;
+  }
+
+  .bottom-menu__list-item{
+    padding-right: 0;
+
+  }
+
+  .bottom-menu__title{
+    display: block;
+    width: 109%;
   }
 
 }

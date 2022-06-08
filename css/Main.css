@@ -320,42 +320,12 @@ a, a:hover {
 
 .bottom-menu__list-item {
   border-right: 1px solid #e5e5e5;
+  padding-right: 2%;
 }
 
 .bottom-menu__title {
   font-weight: 500;
   font-size: 16px;
-}
-
-.bottom-menu__list-item--catalog {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 1 16%;
-          flex: 0 1 16%;
-  text-align: start;
-}
-
-.bottom-menu__list-item--apple {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 1 36%;
-          flex: 0 1 36%;
-}
-
-.bottom-menu__list-item--smartphone {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 1 30%;
-          flex: 0 1 30%;
-}
-
-.bottom-menu__list-item--tablet {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 1 30%;
-          flex: 0 1 30%;
-}
-
-.bottom-menu__list-item--notebook {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 1 30%;
-          flex: 0 1 30%;
 }
 
 .hero {
@@ -725,6 +695,13 @@ a, a:hover {
 }
 
 /* 1400px - 1920px NOT NEEDED due to TechTask*/
+@media screen and (max-width: 1920px) {
+  .fix-counter__wrapper {
+    width: 35%;
+    left: 62%;
+  }
+}
+
 /* 1200px - 1400px ADAPTED FOR 1366px*/
 @media screen and (max-width: 1400px) {
   .menu {
@@ -767,8 +744,8 @@ a, a:hover {
         flex-basis: 48%;
   }
   .fix-counter__wrapper {
-    left: 62%;
-    width: 34%;
+    width: 38%;
+    left: 61%;
     bottom: 26%;
   }
   .specialists__title {
@@ -831,11 +808,14 @@ a, a:hover {
     padding: 15px 30px;
     margin-bottom: 32px;
   }
-  .bottom-menu__list-item--notebook {
+  .bottom-menu__title--notebook {
     display: none;
   }
-  .bottom-menu__list-item--apple, .bottom-menu__list-item--smartphone, .bottom-menu__list-item--tablet {
+  .bottom-menu__list-item {
     border-right: none;
+  }
+  .bottom-menu__list-item:first-child {
+    border-right: 1px solid #e5e5e5;
   }
   .service-content__title {
     font-size: 50px;
@@ -979,13 +959,32 @@ a, a:hover {
 }
 
 /* 768px - 992px */
+@media screen and (max-width: 992px) {
+  .fix-counter__wrapper {
+    width: 36%;
+    left: 63%;
+  }
+  .bottom-menu__title::after {
+    display: none;
+  }
+  .bottom-menu__txt {
+    display: none;
+  }
+}
+
 /* 576px - 768px ADAPTED FOR 768px*/
 @media screen and (max-width: 768px) {
   .header__top-inner {
     padding: 13px 0;
   }
-  .bottom-menu__txt {
-    display: none;
+  .service-content__arrow {
+    width: 103%;
+  }
+  .contact__work-time {
+    width: 92%;
+  }
+  .contact__number {
+    width: 87%;
   }
   .dropdown-toggle::after {
     opacity: 0;
@@ -1000,14 +999,14 @@ a, a:hover {
     width: 55%;
   }
   .hero__right-group, .hero__img {
-    width: 45%;
+    width: 40%;
   }
   .service-content__text--garanty {
     display: none;
   }
   .fix-counter__wrapper {
-    width: 39%;
-    left: 55%;
+    width: 48%;
+    left: 52%;
     bottom: 14%;
   }
   .specialists__title {
@@ -1019,6 +1018,13 @@ a, a:hover {
   }
   .swipe-prev, .swipe-next {
     top: 42%;
+  }
+  .bottom-menu__list-item {
+    padding-right: 0;
+  }
+  .bottom-menu__title {
+    display: block;
+    width: 109%;
   }
 }
 
